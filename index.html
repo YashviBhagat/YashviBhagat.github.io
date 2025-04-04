@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grocery Shopping</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1606813903163-e628b0b07e62') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .video-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .video-section video {
+      max-width: 90%;
+      border: 3px solid #fff;
+      border-radius: 10px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .product-card {
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+    }
+
+    .product-card input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      margin: 10px 0;
+    }
+
+    .product-card button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .product-card button.buy {
+      background: #007bff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      margin-top: 40px;
+    }
+
+    .input-section {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .input-section input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .input-section button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><a href="#">Home</a></div>
+    <div>
+      <a href="#">Fruits</a>
+      <a href="#">Vegetables</a>
+      <a href="#">Dairy</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Fresh Grocery Delivered to You</h1>
+    <p>Quality you can taste. Prices you’ll love.</p>
+  </header>
+
+  <div class="video-section">
+    <h2>Watch Our Process</h2>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <div class="input-section">
+    <h2>Subscribe to Offers</h2>
+    <input type="text" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </div>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1584270354949-1d6a71cfa05a" alt="Apple">
+      <h3>Apples</h3>
+      <p>Price: $2.99 / lb</p>
+      <label>Qty: <input type="number" min="1" value="1"></label><br>
+      <button>Add to Cart</button>
+      <button class="buy">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Banana">
+      <h3>Bananas</h3>
+      <p>Price: $1.49 / lb</p>
+      <label>Qty: <input type="number" min="1" value="1"></label><br>
+      <button>Add to Cart</button>
+      <button class="buy">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1582515073490-dbecefd14015" alt="Milk">
+      <h3>Milk</h3>
+      <p>Price: $3.25 / gallon</p>
+      <label>Qty: <input type="number" min="1" value="1"></label><br>
+      <button>Add to Cart</button>
+      <button class="buy">Buy Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GroceryFresh Inc. | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
