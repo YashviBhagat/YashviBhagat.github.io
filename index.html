@@ -1,219 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grocery Shopping</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1606813903163-e628b0b07e62') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandStay Hotel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        body {
+            background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210d5');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
 
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-      background: rgba(0, 0, 0, 0.5);
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-    .video-section {
-      text-align: center;
-      margin: 40px 0;
-    }
+        nav a:hover {
+            background-color: #444;
+        }
 
-    .video-section video {
-      max-width: 90%;
-      border: 3px solid #fff;
-      border-radius: 10px;
-    }
+        section {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+        }
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
-      background: rgba(0, 0, 0, 0.6);
-    }
+        .video-section video {
+            width: 100%;
+            border-radius: 10px;
+        }
 
-    .product-card {
-      background: #fff;
-      color: #000;
-      border-radius: 10px;
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+        .button {
+            display: inline-block;
+            background-color: #ff9800;
+            padding: 10px 20px;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+        .button:hover {
+            background-color: #e68900;
+        }
 
-    .product-card h3 {
-      margin: 15px 0 5px;
-    }
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-    .product-card p {
-      margin: 5px 0;
-    }
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
 
-    .product-card input[type="number"] {
-      width: 60px;
-      padding: 5px;
-      margin: 10px 0;
-    }
-
-    .product-card button {
-      background: #28a745;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      margin: 5px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .product-card button.buy {
-      background: #007bff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      margin-top: 40px;
-    }
-
-    .input-section {
-      text-align: center;
-      margin: 30px;
-    }
-
-    .input-section input[type="text"] {
-      padding: 10px;
-      width: 250px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .input-section button {
-      padding: 10px 20px;
-      margin-left: 10px;
-      background-color: orange;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to GrandStay Hotel</h1>
+        <p>Experience luxury and comfort like never before</p>
+    </header>
 
-  <nav>
-    <div><a href="#">Home</a></div>
-    <div>
-      <a href="#">Fruits</a>
-      <a href="#">Vegetables</a>
-      <a href="#">Dairy</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  <header>
-    <h1>Fresh Grocery Delivered to You</h1>
-    <p>Quality you can taste. Prices you’ll love.</p>
-  </header>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>GrandStay Hotel is your perfect getaway destination with premium services and cozy comfort. Enjoy gourmet dining, top-class amenities, and breathtaking views at our luxurious property.</p>
+    </section>
 
-  <div class="video-section">
-    <h2>Watch Our Process</h2>
-    <video controls>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support video playback.
-    </video>
-  </div>
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <p>Choose from deluxe rooms, suites, or family apartments all equipped with modern facilities and elegant designs.</p>
+        <a href="#booking" class="button">Book a Room</a>
+    </section>
 
-  <div class="input-section">
-    <h2>Subscribe to Offers</h2>
-    <input id="emailInput" type="text" placeholder="Enter your email">
-    <button onclick="subscribe()">Subscribe</button>
-  </div>
+    <section id="gallery" class="video-section">
+        <h2>Hotel Tour</h2>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
 
-  <section class="products">
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1584270354949-1d6a71cfa05a" alt="Apple">
-      <h3>Apples</h3>
-      <p>Price: $2.99 / lb</p>
-      <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button onclick="addToCart('Apples')">Add to Cart</button>
-      <button class="buy" onclick="buyNow('Apples')">Buy Now</button>
-    </div>
+    <section id="booking">
+        <h2>Booking Form</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" placeholder="Check-in Date" required>
+            <input type="date" placeholder="Check-out Date" required>
+            <textarea placeholder="Additional Requests"></textarea>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </section>
 
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Banana">
-      <h3>Bananas</h3>
-      <p>Price: $1.49 / lb</p>
-      <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button onclick="addToCart('Bananas')">Add to Cart</button>
-      <button class="buy" onclick="buyNow('Bananas')">Buy Now</button>
-    </div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@grandstay.com | Phone: +1 (123) 456-7890</p>
+        <a href="mailto:info@grandstay.com" class="button">Email Us</a>
+    </section>
 
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1582515073490-dbecefd14015" alt="Milk">
-      <h3>Milk</h3>
-      <p>Price: $3.25 / gallon</p>
-      <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button onclick="addToCart('Milk')">Add to Cart</button>
-      <button class="buy" onclick="buyNow('Milk')">Buy Now</button>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 GrandStay Hotel. All Rights Reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 GroceryFresh Inc. | All rights reserved</p>
-  </footer>
-
-  <script>
-    function subscribe() {
-      const email = document.getElementById('emailInput').value;
-      if (email) {
-        alert(`Subscribed with email: ${email}`);
-      } else {
-        alert('Please enter a valid email address.');
-      }
-    }
-
-    function addToCart(item) {
-      alert(`${item} added to cart!`);
-    }
-
-    function buyNow(item) {
-      alert(`Proceeding to buy ${item}.`);
-    }
-  </script>
+    <script>
+        // Simple script for smooth scroll
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
