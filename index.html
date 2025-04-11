@@ -160,8 +160,8 @@
 
   <div class="input-section">
     <h2>Subscribe to Offers</h2>
-    <input type="text" placeholder="Enter your email">
-    <button>Subscribe</button>
+    <input id="emailInput" type="text" placeholder="Enter your email">
+    <button onclick="subscribe()">Subscribe</button>
   </div>
 
   <section class="products">
@@ -170,8 +170,8 @@
       <h3>Apples</h3>
       <p>Price: $2.99 / lb</p>
       <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button>Add to Cart</button>
-      <button class="buy">Buy Now</button>
+      <button onclick="addToCart('Apples')">Add to Cart</button>
+      <button class="buy" onclick="buyNow('Apples')">Buy Now</button>
     </div>
 
     <div class="product-card">
@@ -179,8 +179,8 @@
       <h3>Bananas</h3>
       <p>Price: $1.49 / lb</p>
       <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button>Add to Cart</button>
-      <button class="buy">Buy Now</button>
+      <button onclick="addToCart('Bananas')">Add to Cart</button>
+      <button class="buy" onclick="buyNow('Bananas')">Buy Now</button>
     </div>
 
     <div class="product-card">
@@ -188,8 +188,8 @@
       <h3>Milk</h3>
       <p>Price: $3.25 / gallon</p>
       <label>Qty: <input type="number" min="1" value="1"></label><br>
-      <button>Add to Cart</button>
-      <button class="buy">Buy Now</button>
+      <button onclick="addToCart('Milk')">Add to Cart</button>
+      <button class="buy" onclick="buyNow('Milk')">Buy Now</button>
     </div>
   </section>
 
@@ -197,5 +197,23 @@
     <p>&copy; 2025 GroceryFresh Inc. | All rights reserved</p>
   </footer>
 
+  <script>
+    function subscribe() {
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        alert(`Subscribed with email: ${email}`);
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    }
+
+    function addToCart(item) {
+      alert(`${item} added to cart!`);
+    }
+
+    function buyNow(item) {
+      alert(`Proceeding to buy ${item}.`);
+    }
+  </script>
 </body>
 </html>
